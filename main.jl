@@ -6,11 +6,11 @@ using Images
 
 img = load("test.png")
 img = RGB.(img)
-img = Array(img)
-img_tensor = ROCArray(img)
-println(size(img_tensor))
+#img = Array(img)
+#img = ROCArray(img)
+println(size(img))
 
-gray_tensor = img2gray!(img_tensor)
-print(size(gray_tensor))
+gray_tensor = img2gray!(img)
+println(size(gray_tensor))
 
-save("gray.png", Gray.(gray_tensor))
+save("gray.png", Array(gray_tensor))
